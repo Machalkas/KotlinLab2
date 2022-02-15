@@ -1,7 +1,5 @@
 fun main() {
-    val st = Students()
-    st.decode("""{"name":"Vasia", "group":"p124"}""")
-    st.name="Вася"
-    println(st.encode())
-
+    val stud=decodeStudent("""{"name":"Vasia", "group":"p124"}""")
+    stud.name="Вася"
+    println(encodeStudent(stud))
 }
