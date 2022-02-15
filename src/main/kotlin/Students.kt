@@ -10,10 +10,10 @@ data class Student(var name:String, var group:String, var grades:Grades)
 @Serializable
 data class Grades(var math:Int, var history:Int)
 
-fun decode(json:String):Students{
+fun decodeStudents(json:String):Students{
     val stud=Json.decodeFromString<Students>(json)
     return stud
 }
-fun encode(student:Students):String{
+fun encodeStudents(student:Students):String{
     return Json.encodeToString(student)
 }
