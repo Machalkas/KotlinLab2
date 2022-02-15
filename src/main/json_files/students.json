@@ -1,4 +1,28 @@
-{"name":"Vasia",
-  "group":"p124",
-  "grades":{"math":5,"history":3}
+{
+  "students": [
+    {
+      "name": "Вася",
+      "group": "p124",
+      "grades": {
+        "math": 5,
+        "history": 3
+      }
+    },
+    {
+      "name": "Петя",
+      "group": "p124",
+      "grades": {
+        "math": 5,
+        "history": 3
+      }
+    },
+    {
+      "name": "Маша",
+      "group": "p122",
+      "grades": {
+        "math": 5,
+        "history": 3
+      }
+    }
+  ]
 }

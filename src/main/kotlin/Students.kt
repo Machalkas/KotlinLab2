@@ -4,14 +4,16 @@ import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.encodeToString
 
 @Serializable
+data class Students(var students:Array<Student>)
+@Serializable
 data class Student(var name:String, var group:String, var grades:Grades)
 @Serializable
 data class Grades(var math:Int, var history:Int)
 
-fun decodeStudent(json:String):Student{
-    val stud=Json.decodeFromString<Student>(json)
+fun decode(json:String):Students{
+    val stud=Json.decodeFromString<Students>(json)
     return stud
 }
-fun encodeStudent(student:Student):String{
+fun encode(student:Students):String{
     return Json.encodeToString(student)
 }
