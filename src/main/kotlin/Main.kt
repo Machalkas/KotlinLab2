@@ -1,10 +1,11 @@
 import java.io.File
 
-val fn="students"
+val file_name="students"
+val path="./src/main/json_files/"
 fun main() {
-    val stud=decodeStudent(readFile("./src/main/json_files/$fn.json"))
+    val stud=decodeStudent(readFile("$path$file_name.json"))
     stud.name="Вася"
-    writeFile("./src/main/json_files/new_$fn.json",encodeStudent(stud))
+    writeFile("${path}new_$file_name.json",encodeStudent(stud))
 }
 
 fun readFile(file_name:String)=File(file_name).readText()

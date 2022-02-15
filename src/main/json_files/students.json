@@ -1,1 +1,4 @@
-{"name":"Vasia", "group":"p124"}
+{"name":"Vasia",
+  "group":"p124",
+  "grades":{"math":5,"history":3}
+}
