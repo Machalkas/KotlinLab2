@@ -1,7 +1,7 @@
-import kotlinx.serialization.Serializable
+import kotlinx.serialization.*
 import kotlinx.serialization.json.Json
-import kotlinx.serialization.decodeFromString
-import kotlinx.serialization.encodeToString
+import kotlinx.serialization.cbor.Cbor
+import kotlinx.serialization.protobuf.ProtoBuf
 
 @Serializable
 data class Students(var students:Array<Student>)
@@ -10,10 +10,9 @@ data class Student(var name:String, var group:String, var grades:Grades)
 @Serializable
 data class Grades(var math:Int, var history:Int)
 
-fun decodeStudents(json:String):Students{
-    val stud=Json.decodeFromString<Students>(json)
-    return stud
-}
-fun encodeStudents(student:Students):String{
-    return Json.encodeToString(student)
-}
+fun decodeJson(strudents: String):Students=Json.decodeFromString<Students>(strudents)
+fun encodeJson(students: Students):String=Json.encodeToString(students)
+fun decodeCbor(students: ByteArray):Students=Cbor.decodeFromByteArray<Students>(students)
+fun encodeCbor(students: Students):ByteArray=Cbor.encodeToByteArray(students)
+fun decodeProtobuf(students: ByteArray):Students=ProtoBuf.decodeFromByteArray<Students>(students)
+fun encodeProtobuf(students: Students):ByteArray=ProtoBuf.encodeToByteArray(students)
