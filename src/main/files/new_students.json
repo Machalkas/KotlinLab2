@@ -4,42 +4,16 @@
       "name": "Василий",
       "group": "p124",
       "grades": [
-        {
-          "subject": "math",
-          "mark": 5
-        },
-        {
-          "subject": "history",
-          "mark": 4
-        }
+        {"subject": "math", "mark": 5},
+        {"subject": "history", "mark": 4}
       ]
     },
     {
       "name": "Петя",
       "group": "p124",
       "grades": [
-        {
-          "subject": "math",
-          "mark": 5
-        },
-        {
-          "subject": "history",
-          "mark": 4
-        }
-      ]
-    },
-    {
-      "name": "Маша",
-      "group": "p122",
-      "grades": [
-        {
-          "subject": "math",
-          "mark": 5
-        },
-        {
-          "subject": "history",
-          "mark": 4
-        }
+        {"subject": "math", "mark": 5},
+        {"subject": "history", "mark": 4}
       ]
     }
   ]
