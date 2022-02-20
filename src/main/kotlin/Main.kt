@@ -3,10 +3,17 @@ import java.io.File
 val file_name="students"
 val path="./src/main/files/"
 fun main() {
+//    val g= arrayOf(Grade("math",5))
+//    val st=Student("kek","11",g)
+//    val stud=Students(arrayOf(st))
+//    print(stud)
     val stud=decodeJson(readFile("$path$file_name.json"))
+    print(stud)
     stud.students[0].name="Василий"
     for (i in stud.students){
-        i.grades.history=4
+        for (j in i.grades) {
+            if(j.subject=="history") j.mark=4
+        }
     }
     writeFile("${path}new_$file_name.json",encodeJson(stud))
 

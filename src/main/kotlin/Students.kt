@@ -6,9 +6,9 @@ import kotlinx.serialization.protobuf.ProtoBuf
 @Serializable
 data class Students(var students:Array<Student>)
 @Serializable
-data class Student(var name:String, var group:String, var grades:Grades)
+data class Student(var name:String, var group:String, var grades:Array<Grade>)
 @Serializable
-data class Grades(var math:Int, var history:Int)
+data class Grade(var subject:String, var mark:Int)
 
 fun decodeJson(strudents: String):Students=Json.decodeFromString<Students>(strudents)
 fun encodeJson(students: Students):String=Json.encodeToString(students)
