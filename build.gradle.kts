@@ -20,6 +20,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.2")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-cbor:1.3.2")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-protobuf:1.3.2")
+    testImplementation(kotlin("test"))
 }
 
 tasks.test {

@@ -22,8 +22,12 @@ fun main() {
     writeBinaryFile("${path}new_$file_name.proto", encodeProtobuf(stud))//сохраняем в бинарный файл в формате Protocol Buffer
     val stud_proto=decodeProtobuf(readBinaryFile("${path}new_$file_name.proto"))
     print("read from proto file: $stud_proto")
+
 }
+
+
 fun readFile(file_name:String)=File(file_name).readText()
 fun writeFile(file_name:String,content:String)=File(file_name).writeText(content)
 fun readBinaryFile(file_name: String)=File(file_name).readBytes()
 fun writeBinaryFile(file_name: String, content: ByteArray)=File(file_name).writeBytes(content)
+
