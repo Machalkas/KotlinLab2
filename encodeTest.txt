@@ -1,0 +1,39 @@
+CBOR:
+Iteration 1 time 8 ms
+Iteration 2 time 1 ms
+Iteration 3 time 1 ms
+Iteration 4 time 0 ms
+Iteration 5 time 1 ms
+Iteration 6 time 0 ms
+Iteration 7 time 1 ms
+Iteration 8 time 0 ms
+Iteration 9 time 1 ms
+Iteration 10 time 1 ms
+Avg: 1.4
+
+JSON:
+Iteration 1 time 12 ms
+Iteration 2 time 1 ms
+Iteration 3 time 0 ms
+Iteration 4 time 1 ms
+Iteration 5 time 1 ms
+Iteration 6 time 0 ms
+Iteration 7 time 0 ms
+Iteration 8 time 1 ms
+Iteration 9 time 1 ms
+Iteration 10 time 0 ms
+Avg: 1.7
+
+Protobuff:
+Iteration 1 time 11 ms
+Iteration 2 time 1 ms
+Iteration 3 time 1 ms
+Iteration 4 time 0 ms
+Iteration 5 time 1 ms
+Iteration 6 time 1 ms
+Iteration 7 time 0 ms
+Iteration 8 time 1 ms
+Iteration 9 time 1 ms
+Iteration 10 time 0 ms
+Avg: 1.7
+
