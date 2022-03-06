@@ -6,54 +6,85 @@ import kotlin.system.measureTimeMillis
 import java.io.File
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-class EncodeTest{
-    val iterations=10
-    val stud=decodeJson(readFile("${path}test_$file_name.json"))
-    val file=File("encodeTest.txt").bufferedWriter()
-    var avg=0.0
+class EncodeTest {
+    val iterations = 30
+    val stud = decodeJson(readFile("${path}test_$file_name.json"))
+    val file = File("encodeTest.txt").bufferedWriter()
+    var avgEncode = 0.0
+    var avgDecode = 0.0
+
     @AfterAll
-    fun cleanup(){
+    fun cleanup() {
         print("cleanup")
         file.close()
     }
+
     @BeforeEach
-    fun prepare(){
-        avg=0.0
+    fun prepare() {
+        avgEncode = 0.0
+        avgDecode = 0.0
     }
+
     @Test
-    fun testJson(){
+    fun testJson() {
         file.write("JSON:\n")
-        for(i in 1..iterations) {
-            val millis = measureTimeMillis {
-                encodeJson(stud)
+        print("JSON:\n")
+        for (i in 1..iterations) {
+            var st:String
+            val eMillis = measureTimeMillis {
+                st = encodeJson(stud)
             }
-            avg+=millis
-            file.write("Iteration $i time $millis ms\n")
+            avgEncode += eMillis
+            val dMillis = measureTimeMillis {
+                decodeJson(st)
+            }
+            avgDecode+=dMillis
+            file.write("Iteration $i | Encode time $eMillis ms; Decode time $dMillis ms;\n")
+            print("Iteration $i | Encode time $eMillis ms; Decode time $dMillis ms;\n")
         }
-        file.write("Avg: ${avg/iterations}\n\n")
+        file.write("Avg: encode ${avgEncode / iterations}; decode ${avgDecode / iterations};\n\n")
+        print("Avg: encode ${avgEncode / iterations}; decode ${avgDecode / iterations};\n\n")
     }
+
     @Test
-    fun testCbor(){
+    fun testCbor() {
         file.write("CBOR:\n")
-        for(i in 1..iterations) {
-            val millis = measureTimeMillis {
-                encodeCbor(stud)
+        print("CBOR:\n")
+        for (i in 1..iterations) {
+            var st:ByteArray
+            val eMillis = measureTimeMillis {
+                st = encodeCbor(stud)
             }
-            avg+=millis
-            file.write("Iteration $i time $millis ms\n")
+            avgEncode += eMillis
+            val dMillis = measureTimeMillis {
+                decodeCbor(st)
+            }
+            avgDecode+=dMillis
+            file.write("Iteration $i | Encode time $eMillis ms; Decode time $dMillis ms;\n")
+            print("Iteration $i | Encode time $eMillis ms; Decode time $dMillis ms;\n")
         }
-        file.write("Avg: ${avg/iterations}\n\n")
+        file.write("Avg: encode ${avgEncode / iterations}; decode ${avgDecode / iterations};\n\n")
+        print("Avg: encode ${avgEncode / iterations}; decode ${avgDecode / iterations};\n\n")
     }
+
     @Test
-    fun testProtobuff(){
+    fun testProtobuff() {
         file.write("Protobuff:\n")
-        for(i in 1..iterations) {
-            val millis = measureTimeMillis {
-                encodeProtobuf(stud)
+        print("Protobuff:\n")
+        for (i in 1..iterations) {
+            var st:ByteArray
+            val eMillis = measureTimeMillis {
+                st = encodeProtobuf(stud)
             }
-            avg+=millis
-            file.write("Iteration $i time $millis ms\n")
+            avgEncode += eMillis
+            val dMillis = measureTimeMillis {
+                decodeProtobuf(st)
+            }
+            avgDecode+=dMillis
+            file.write("Iteration $i | Encode time $eMillis ms; Decode time $dMillis ms;\n")
+            print("Iteration $i | Encode time $eMillis ms; Decode time $dMillis ms;\n")
         }
-        file.write("Avg: ${avg/iterations}\n\n")
+        file.write("Avg: encode ${avgEncode / iterations}; decode ${avgDecode / iterations};\n\n")
+        print("Avg: encode ${avgEncode / iterations}; decode ${avgDecode / iterations};\n\n")
     }
 }

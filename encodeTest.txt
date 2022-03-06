@@ -1,39 +1,99 @@
 CBOR:
-Iteration 1 time 8 ms
-Iteration 2 time 1 ms
-Iteration 3 time 1 ms
-Iteration 4 time 0 ms
-Iteration 5 time 1 ms
-Iteration 6 time 0 ms
-Iteration 7 time 1 ms
-Iteration 8 time 0 ms
-Iteration 9 time 1 ms
-Iteration 10 time 1 ms
-Avg: 1.4
+Iteration 1 | Encode time 12 ms; Decode time 9 ms;
+Iteration 2 | Encode time 2 ms; Decode time 4 ms;
+Iteration 3 | Encode time 2 ms; Decode time 3 ms;
+Iteration 4 | Encode time 2 ms; Decode time 2 ms;
+Iteration 5 | Encode time 2 ms; Decode time 3 ms;
+Iteration 6 | Encode time 1 ms; Decode time 3 ms;
+Iteration 7 | Encode time 1 ms; Decode time 1 ms;
+Iteration 8 | Encode time 2 ms; Decode time 2 ms;
+Iteration 9 | Encode time 1 ms; Decode time 2 ms;
+Iteration 10 | Encode time 1 ms; Decode time 1 ms;
+Iteration 11 | Encode time 1 ms; Decode time 2 ms;
+Iteration 12 | Encode time 1 ms; Decode time 1 ms;
+Iteration 13 | Encode time 1 ms; Decode time 0 ms;
+Iteration 14 | Encode time 0 ms; Decode time 1 ms;
+Iteration 15 | Encode time 0 ms; Decode time 1 ms;
+Iteration 16 | Encode time 1 ms; Decode time 0 ms;
+Iteration 17 | Encode time 1 ms; Decode time 0 ms;
+Iteration 18 | Encode time 0 ms; Decode time 1 ms;
+Iteration 19 | Encode time 0 ms; Decode time 1 ms;
+Iteration 20 | Encode time 1 ms; Decode time 0 ms;
+Iteration 21 | Encode time 0 ms; Decode time 1 ms;
+Iteration 22 | Encode time 0 ms; Decode time 1 ms;
+Iteration 23 | Encode time 1 ms; Decode time 1 ms;
+Iteration 24 | Encode time 0 ms; Decode time 1 ms;
+Iteration 25 | Encode time 0 ms; Decode time 1 ms;
+Iteration 26 | Encode time 1 ms; Decode time 1 ms;
+Iteration 27 | Encode time 0 ms; Decode time 1 ms;
+Iteration 28 | Encode time 1 ms; Decode time 1 ms;
+Iteration 29 | Encode time 0 ms; Decode time 1 ms;
+Iteration 30 | Encode time 1 ms; Decode time 0 ms;
+Avg: encode 1.2; decode 1.5333333333333334;
 
 JSON:
-Iteration 1 time 12 ms
-Iteration 2 time 1 ms
-Iteration 3 time 0 ms
-Iteration 4 time 1 ms
-Iteration 5 time 1 ms
-Iteration 6 time 0 ms
-Iteration 7 time 0 ms
-Iteration 8 time 1 ms
-Iteration 9 time 1 ms
-Iteration 10 time 0 ms
-Avg: 1.7
+Iteration 1 | Encode time 18 ms; Decode time 6 ms;
+Iteration 2 | Encode time 2 ms; Decode time 3 ms;
+Iteration 3 | Encode time 2 ms; Decode time 1 ms;
+Iteration 4 | Encode time 0 ms; Decode time 2 ms;
+Iteration 5 | Encode time 1 ms; Decode time 1 ms;
+Iteration 6 | Encode time 0 ms; Decode time 2 ms;
+Iteration 7 | Encode time 0 ms; Decode time 2 ms;
+Iteration 8 | Encode time 1 ms; Decode time 4 ms;
+Iteration 9 | Encode time 1 ms; Decode time 3 ms;
+Iteration 10 | Encode time 1 ms; Decode time 3 ms;
+Iteration 11 | Encode time 4 ms; Decode time 2 ms;
+Iteration 12 | Encode time 0 ms; Decode time 3 ms;
+Iteration 13 | Encode time 1 ms; Decode time 2 ms;
+Iteration 14 | Encode time 1 ms; Decode time 2 ms;
+Iteration 15 | Encode time 1 ms; Decode time 1 ms;
+Iteration 16 | Encode time 1 ms; Decode time 2 ms;
+Iteration 17 | Encode time 0 ms; Decode time 2 ms;
+Iteration 18 | Encode time 1 ms; Decode time 2 ms;
+Iteration 19 | Encode time 1 ms; Decode time 2 ms;
+Iteration 20 | Encode time 1 ms; Decode time 2 ms;
+Iteration 21 | Encode time 1 ms; Decode time 2 ms;
+Iteration 22 | Encode time 1 ms; Decode time 1 ms;
+Iteration 23 | Encode time 1 ms; Decode time 2 ms;
+Iteration 24 | Encode time 1 ms; Decode time 3 ms;
+Iteration 25 | Encode time 1 ms; Decode time 2 ms;
+Iteration 26 | Encode time 1 ms; Decode time 1 ms;
+Iteration 27 | Encode time 1 ms; Decode time 2 ms;
+Iteration 28 | Encode time 1 ms; Decode time 2 ms;
+Iteration 29 | Encode time 2 ms; Decode time 2 ms;
+Iteration 30 | Encode time 0 ms; Decode time 2 ms;
+Avg: encode 1.5666666666666667; decode 2.2;
 
 Protobuff:
-Iteration 1 time 11 ms
-Iteration 2 time 1 ms
-Iteration 3 time 1 ms
-Iteration 4 time 0 ms
-Iteration 5 time 1 ms
-Iteration 6 time 1 ms
-Iteration 7 time 0 ms
-Iteration 8 time 1 ms
-Iteration 9 time 1 ms
-Iteration 10 time 0 ms
-Avg: 1.7
+Iteration 1 | Encode time 19 ms; Decode time 23 ms;
+Iteration 2 | Encode time 2 ms; Decode time 3 ms;
+Iteration 3 | Encode time 2 ms; Decode time 2 ms;
+Iteration 4 | Encode time 2 ms; Decode time 2 ms;
+Iteration 5 | Encode time 1 ms; Decode time 2 ms;
+Iteration 6 | Encode time 2 ms; Decode time 1 ms;
+Iteration 7 | Encode time 1 ms; Decode time 1 ms;
+Iteration 8 | Encode time 0 ms; Decode time 1 ms;
+Iteration 9 | Encode time 1 ms; Decode time 2 ms;
+Iteration 10 | Encode time 0 ms; Decode time 1 ms;
+Iteration 11 | Encode time 1 ms; Decode time 2 ms;
+Iteration 12 | Encode time 1 ms; Decode time 1 ms;
+Iteration 13 | Encode time 1 ms; Decode time 2 ms;
+Iteration 14 | Encode time 1 ms; Decode time 1 ms;
+Iteration 15 | Encode time 1 ms; Decode time 1 ms;
+Iteration 16 | Encode time 1 ms; Decode time 1 ms;
+Iteration 17 | Encode time 1 ms; Decode time 1 ms;
+Iteration 18 | Encode time 1 ms; Decode time 2 ms;
+Iteration 19 | Encode time 1 ms; Decode time 2 ms;
+Iteration 20 | Encode time 1 ms; Decode time 1 ms;
+Iteration 21 | Encode time 0 ms; Decode time 1 ms;
+Iteration 22 | Encode time 1 ms; Decode time 1 ms;
+Iteration 23 | Encode time 1 ms; Decode time 0 ms;
+Iteration 24 | Encode time 0 ms; Decode time 1 ms;
+Iteration 25 | Encode time 0 ms; Decode time 1 ms;
+Iteration 26 | Encode time 2 ms; Decode time 1 ms;
+Iteration 27 | Encode time 1 ms; Decode time 1 ms;
+Iteration 28 | Encode time 1 ms; Decode time 1 ms;
+Iteration 29 | Encode time 1 ms; Decode time 2 ms;
+Iteration 30 | Encode time 1 ms; Decode time 2 ms;
+Avg: encode 1.6; decode 2.1;
 
